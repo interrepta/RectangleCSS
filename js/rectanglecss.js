@@ -3,8 +3,15 @@ $( document ).ready( function() {
 
     $normalElement.each(function() {
         $width = attribute($(this), 'width');
+        $outofframeleft = attribute($(this), 'outofframeleft');
+        $outofframeright = attribute($(this), 'outofframeright');
+        $outofframetop = attribute($(this), 'outofframetop');
+        $outofframebottom = attribute($(this), 'outofframebottom');
+        $(this).css({"margin-left" : $outofframeleft});
+        $(this).css({"margin-right" : $outofframeright});
+        $(this).css({"margin-top" : $outofframetop});
+        $(this).css({"margin-bottom" : $outofframebottom});
         width($(this), $width);
-        margin($(this), "0");
         display($(this), "inline-block");
         float($(this), "left");
         position($(this), "relative");
