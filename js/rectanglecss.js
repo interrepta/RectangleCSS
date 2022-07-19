@@ -3,21 +3,36 @@ $( document ).ready( function() {
 
     $normalElement.each(function() {
         $width = attribute($(this), 'width');
-        $outofframeleft = attribute($(this), 'outofframeleft');
-        $outofframeright = attribute($(this), 'outofframeright');
-        $outofframetop = attribute($(this), 'outofframetop');
-        $outofframebottom = attribute($(this), 'outofframebottom');
-        $(this).css({"margin-left" : $outofframeleft});
-        $(this).css({"margin-right" : $outofframeright});
-        $(this).css({"margin-top" : $outofframetop});
-        $(this).css({"margin-bottom" : $outofframebottom});
         width($(this), $width);
+
+        $margin = attribute($(this), 'margin');
+        $marginleft = attribute($(this), 'marginleft');
+        $marginright = attribute($(this), 'marginright');
+        $margintop = attribute($(this), 'margintop');
+        $marginbottom = attribute($(this), 'marginbottom');
+        $(this).css({"margin" : $margin});
+        $(this).css({"margin-left" : $marginleft});
+        $(this).css({"margin-right" : $marginright});
+        $(this).css({"margin-top" : $margintop});
+        $(this).css({"margin-bottom" : $marginbottom});
+
+        $padding = attribute($(this), 'padding');
+        $paddingleft = attribute($(this), 'paddingleft');
+        $paddingright = attribute($(this), 'paddingright');
+        $paddingtop = attribute($(this), 'paddingtop');
+        $paddingbottom = attribute($(this), 'paddingbottom');
+        $(this).css({"padding" : $padding});
+        $(this).css({"padding-left" : $paddingleft});
+        $(this).css({"padding-right" : $paddingright});
+        $(this).css({"padding-top" : $paddingtop});
+        $(this).css({"padding-bottom" : $paddingbottom});
+
         display($(this), "inline-block");
         float($(this), "left");
         position($(this), "relative");
         positionOnTop($(this), 2);
 
-        enableEditMode($(this), false);
+        enableEditMode($(this), true);
     });
 
 
